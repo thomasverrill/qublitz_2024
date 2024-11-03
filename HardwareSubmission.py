@@ -1,5 +1,5 @@
 from qutip import *
-from typing import List
+from typing import List, Callable
 
 # Note: it is OK if object/function names from qutip are not 
 # highlighted and underlined (e.g. "qutip" or "Qobj"). However, 
@@ -16,10 +16,10 @@ class HardwareSolutions:
     def hardware_2(self,Omega_R:float,omega:float,omega_drive:float,t:float) -> Qobj:
         pass
 
-    def hardware_3(self,Omega_R:float,omega:float,omega_drive:float,t:List[float]) -> float:
+    def hardware_3(self,Omega_R:float,omega:float,omega_drive:float,t:List[float]) -> List[float]:
         pass
 
-    def hardware_4(self,psi_n:float,psi_n_1:float,E_1:float,q:float) -> float:
+    def hardware_4(self,psi_n:Callable[[float],float],psi_n_1:Callable[[float],float],E_1:float,q:float) -> float:
         pass
 
     def hardware_5(self,Omega_R:float,delta:float) -> float:
